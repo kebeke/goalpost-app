@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E030CA792949EBCB00157226 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030CA782949EBCB00157226 /* GoalCell.swift */; };
+		E048E196294B33F000652EEE /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E048E195294B33F000652EEE /* GoalType.swift */; };
+		E048E198294B51B200652EEE /* CreateGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E048E197294B51B100652EEE /* CreateGoalVC.swift */; };
+		E048E19A294B53FA00652EEE /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E048E199294B53FA00652EEE /* UIViewControllerExt.swift */; };
 		E071B56B293E0DFD00BD15B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E071B56A293E0DFD00BD15B5 /* AppDelegate.swift */; };
 		E071B56D293E0DFD00BD15B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E071B56C293E0DFD00BD15B5 /* SceneDelegate.swift */; };
-		E071B56F293E0DFD00BD15B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E071B56E293E0DFD00BD15B5 /* ViewController.swift */; };
+		E071B56F293E0DFD00BD15B5 /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E071B56E293E0DFD00BD15B5 /* GoalsVC.swift */; };
 		E071B572293E0DFD00BD15B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E071B570293E0DFD00BD15B5 /* Main.storyboard */; };
 		E071B575293E0DFD00BD15B5 /* goalpost_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E071B573293E0DFD00BD15B5 /* goalpost_app.xcdatamodeld */; };
 		E071B577293E0DFF00BD15B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E071B576293E0DFF00BD15B5 /* Assets.xcassets */; };
@@ -17,10 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E030CA782949EBCB00157226 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		E048E195294B33F000652EEE /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
+		E048E197294B51B100652EEE /* CreateGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalVC.swift; sourceTree = "<group>"; };
+		E048E199294B53FA00652EEE /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		E071B567293E0DFD00BD15B5 /* goalpost-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "goalpost-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E071B56A293E0DFD00BD15B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E071B56C293E0DFD00BD15B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E071B56E293E0DFD00BD15B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E071B56E293E0DFD00BD15B5 /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
 		E071B571293E0DFD00BD15B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E071B574293E0DFD00BD15B5 /* goalpost_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = goalpost_app.xcdatamodel; sourceTree = "<group>"; };
 		E071B576293E0DFF00BD15B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,9 +66,12 @@
 		E071B569293E0DFD00BD15B5 /* goalpost-app */ = {
 			isa = PBXGroup;
 			children = (
+				E071B583293E115900BD15B5 /* Extensions */,
+				E071B584293E14D400BD15B5 /* Enums */,
+				E071B582293E114D00BD15B5 /* View */,
+				E071B581293E112C00BD15B5 /* Controller */,
 				E071B56A293E0DFD00BD15B5 /* AppDelegate.swift */,
 				E071B56C293E0DFD00BD15B5 /* SceneDelegate.swift */,
-				E071B56E293E0DFD00BD15B5 /* ViewController.swift */,
 				E071B570293E0DFD00BD15B5 /* Main.storyboard */,
 				E071B576293E0DFF00BD15B5 /* Assets.xcassets */,
 				E071B578293E0DFF00BD15B5 /* LaunchScreen.storyboard */,
@@ -68,6 +79,39 @@
 				E071B573293E0DFD00BD15B5 /* goalpost_app.xcdatamodeld */,
 			);
 			path = "goalpost-app";
+			sourceTree = "<group>";
+		};
+		E071B581293E112C00BD15B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E071B56E293E0DFD00BD15B5 /* GoalsVC.swift */,
+				E048E197294B51B100652EEE /* CreateGoalVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E071B582293E114D00BD15B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E030CA782949EBCB00157226 /* GoalCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E071B583293E115900BD15B5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E048E199294B53FA00652EEE /* UIViewControllerExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E071B584293E14D400BD15B5 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E048E195294B33F000652EEE /* GoalType.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E071B56F293E0DFD00BD15B5 /* ViewController.swift in Sources */,
+				E071B56F293E0DFD00BD15B5 /* GoalsVC.swift in Sources */,
 				E071B56B293E0DFD00BD15B5 /* AppDelegate.swift in Sources */,
+				E048E19A294B53FA00652EEE /* UIViewControllerExt.swift in Sources */,
+				E048E196294B33F000652EEE /* GoalType.swift in Sources */,
 				E071B575293E0DFD00BD15B5 /* goalpost_app.xcdatamodeld in Sources */,
+				E048E198294B51B200652EEE /* CreateGoalVC.swift in Sources */,
+				E030CA792949EBCB00157226 /* GoalCell.swift in Sources */,
 				E071B56D293E0DFD00BD15B5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +347,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -327,6 +376,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
